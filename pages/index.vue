@@ -35,9 +35,7 @@
         </div>
       </div>
     </div>
-    <div
-      class="fixed w-full bg-white bottom-0 addnew-sheet"
-    >
+    <div class="fixed w-full bg-white bottom-0 addnew-sheet">
       <div class="p-4 w-full h-full flex relative items-center justify-center">
         <div class="mb-3 w-full">
           <div class="relative">
@@ -127,7 +125,7 @@ export default {
     content: '';
     height: 25px;
     width: 25px;
-    background: #faf089;
+    background: none;
     border-radius: 100%;
     display: inline-block;
     position: absolute;
@@ -138,25 +136,24 @@ export default {
 
   &::after {
     content: '';
-    height: 10px;
-    width: 10px;
+    height: 13px;
+    width: 13px;
     background: black;
     border-radius: 100%;
     display: inline-block;
     position: absolute;
-    top: 8px;
+    top: 7px;
     left: 7px;
     transform: scale(0.7);
-    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   }
 
   &.active {
-    &::before {
-      transform: scale(1);
-    }
-
     &::after {
-      transform: scale(1);
+      opacity: 0;
+    }
+    &::before {
+      transform: scale(1.2);
       background: url("data:image/svg+xml,%3Csvg class='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 13l4 4L19 7'%3E%3C/path%3E%3C/svg%3E");
       top: 2px;
       left: 3px;
@@ -164,7 +161,6 @@ export default {
       width: 20px;
       background-size: 100%;
       background-repeat: none;
-      opacity: 75%;
     }
 
     & + div {
