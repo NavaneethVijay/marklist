@@ -1,4 +1,7 @@
 export default {
+  server: {
+    host: '192.168.0.9'
+  },
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
   ssr: false,
 
