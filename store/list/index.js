@@ -1,18 +1,5 @@
 export const state = () => ({
-  items: [
-    {
-      text: 'Create a new marklist',
-      done: true
-    },
-    {
-      text: 'Flexible crud actions',
-      done: false
-    },
-    {
-      text: 'Find new logo',
-      done: true
-    }
-  ]
+  items: []
 })
 
 export const getters = {
@@ -34,8 +21,8 @@ export const mutations = {
    * @param {*} state
    * @param {*} param1
    */
-  remove(state, { todo }) {
-    state.items.splice(state.list.indexOf(todo), 1)
+  remove(state, id) {
+    state.items = state.items.filter(item => item.id != id)
   },
   /**
    *
