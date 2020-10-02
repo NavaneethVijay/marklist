@@ -166,7 +166,6 @@ export default {
       width: 20px;
       background-size: 100%;
       background-repeat: none;
-      opacity: 50%;
     }
 
     & + div {

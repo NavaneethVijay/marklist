@@ -10,10 +10,7 @@
         @click="toggle(todo)"
         class="list-toggle md:cursor-pointer pl-8 ml-4"
       ></div>
-      <div
-        class="text-lg flex items-center"
-        :class="{ 'opacity-50': todo.done }"
-      >
+      <div class="text-lg flex items-center">
         <span class="px-2 task-title">{{ todo.text }}</span>
       </div>
     </div>
